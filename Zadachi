@@ -1,0 +1,47 @@
+import math as m
+class zadachi:
+    def __init__(self):
+        return 0;
+    def First(x,y):
+        return m.log(m.fabs(m.sin(x+y)))
+    def Second(x,y):
+        if (m.sin(x+y)<=-0.5):
+            return(m.pow(m.atan(m.pow((m.fabs(x-y)),1/3))*(x*m.exp(y)),-1))
+        elif (m.sin(x+y)>-0.5) and (m.sin(x+y)<0.5):
+            return(3*m.log(m.fabs(x*y),3))
+        else:
+            return(x**3+y**1.5)
+    def Third(a,b,hx):
+        for i in range(a,b+1,hx):
+            print(m.pow(m.cos(m.exp(1)*i),3)+m.sin(m.fabs(i)))
+    def Forth():
+        x=1
+        for y in range(1,5):
+            if ((x+y)<=2):
+                print(m.pow(m.sin(x*m.exp(0.1*y)),3))
+            else:
+                print(m.fabs(m.log(x+y,2)))
+            x+=0.5
+            
+
+Vidyakin=zadachi
+s=''
+while s!='0':
+    s=input()
+    if s=='First':
+        ch1=float(input())
+        ch2=float(input())
+        print(Vidyakin.First(ch1,ch2))
+    if s=='Second':
+        ch1=float(input())
+        ch2=float(input())
+        print(Vidyakin.Second(ch1,ch2))
+    if s=='Third':
+        ch1=int(input())
+        ch2=int(input())
+        ch3=int(input())
+        Vidyakin.Third(ch1,ch2,ch3)
+    if s=='Forth':
+        Vidyakin.Forth()
+
+        
